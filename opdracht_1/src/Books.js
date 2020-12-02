@@ -8,12 +8,12 @@ export default function Books(){
     const [showBook, setShow] = React.useState(false);
     return(
         <div>
-            {showBook && <Book name="Black Swan"/>}
+            {showBook && bookList.map(book => <Book title={book.title}/>)}
             <button onClick={() => setShow(true)}>
                 Show
             </button>
 
-            {bookList.map(book => <Book title={book.title}/>)}
+            
         </div>
     )
 }
